@@ -5,6 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// Если выскакивает ошибка о невозможности записи значения очков, 
+// то нужно удалить файл best_score.dat в папке Scores игры
+
 namespace Snake
 {
     class ScoreManager
