@@ -9,13 +9,13 @@ namespace Snake
 {
     class Visualizer
     {
-        static Pen snakePen = new Pen(Color.FromArgb(0x41, 0x8d, 0xcb), 1); //#FF7C45 //#418dcb
+        static Pen snakePen = new Pen(Color.FromArgb(0x41, 0x8d, 0xcb), 1); //#418dcb
         static Pen foodPen = new Pen(Color.FromArgb(0xff, 0x7c, 0x45), 1); //#ff7c45
         static Pen statsFieldPen = new Pen(Color.FromArgb(0x54, 0x78, 0xB2), 1); //#5478B2
-        static Pen wallPen = new Pen(Color.FromArgb(0xff, 0xdd, 0x73), 1);   //#976D23 #FFDD73
+        static Pen wallPen = new Pen(Color.FromArgb(0xff, 0xdd, 0x73), 1); // #FFDD73
 
-        static SolidBrush rectangleColor = new SolidBrush(Color.FromArgb(0x54, 0x79, 0xB2));
-        static SolidBrush textColor = new SolidBrush(Color.FromArgb(0xc0, 0xda, 0xff)); //#C6E6F5 #C0DAFF      
+        static SolidBrush rectangleColor = new SolidBrush(Color.FromArgb(0x54, 0x79, 0xB2)); //#5479B2
+        static SolidBrush textColor = new SolidBrush(Color.FromArgb(0xc0, 0xda, 0xff)); // #C0DAFF      
 
         static FontFamily fontFamily = new FontFamily("Arial");
         static FontFamily upperTextFont = new FontFamily("Segoe UI");
