@@ -132,36 +132,6 @@ namespace Snake
                         break;
                 }
             }
-            if (!isGameOver & !isPaused)
-            {
-                switch (e.KeyCode)
-                {
-                    case Keys.D2:
-                        timer.Interval = 500;
-                        break;
-                    case Keys.D3:
-                        timer.Interval = 450;
-                        break;
-                    case Keys.D4:
-                        timer.Interval = 400;
-                        break;
-                    case Keys.D5:
-                        timer.Interval = 350;
-                        break;
-                    case Keys.D6:
-                        timer.Interval = 300;
-                        break;
-                    case Keys.D7:
-                        timer.Interval = 250;
-                        break;
-                    case Keys.D8:
-                        timer.Interval = 200;
-                        break;
-                    case Keys.D9:
-                        timer.Interval = 150;
-                        break;
-                }
-            }
         }
 
         private static void Timer_Tick(object sender, EventArgs e)
@@ -216,7 +186,7 @@ namespace Snake
             GenerateFood();
             timer = new System.Windows.Forms.Timer(components);
             timer.Tick += Timer_Tick;
-            timer.Interval = 250;
+            timer.Interval = 200;
             timer.Enabled = true;
             timer.Start();
         }
