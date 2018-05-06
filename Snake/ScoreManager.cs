@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-// Если выскакивает ошибка о невозможности записи значения очков, 
+// Если выскакивает ошибка о невозможности чтения значения очков, 
 // то нужно удалить файл best_score.dat в папке Scores игры
 
 namespace Snake
@@ -32,7 +32,7 @@ namespace Snake
                 SetBestScore(0);
             }
 
-            using (BinaryReader reader = new BinaryReader(File.Open(path, FileMode.Open)))
+            using (BinaryReader reader = new BinaryReader(File.Open(path, FileMode.Open), Encoding.ASCII))
             {
                 while (reader.PeekChar() > -1)
                 {
