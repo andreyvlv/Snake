@@ -139,8 +139,8 @@ namespace Snake
 
         private static void Timer_Tick(object sender, EventArgs e)
         {
-            gameCanvas.Invalidate();
-            snake.Move(direction, food, gameCanvas.Size.Height, gameCanvas.Size.Width, wall);
+            gameCanvas.Invalidate();           
+            snake.Move(direction, food, gameCanvas.Size, wall);
         }
 
         private static void pictureBox1_Paint(object sender, System.Windows.Forms.PaintEventArgs e)

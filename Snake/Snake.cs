@@ -34,9 +34,9 @@ namespace Snake
                 Y = Body[Body.Count - 1].Y
             };
             Body.Add(nexus);
-        }
+        }      
 
-        public void Move(Direction direction, MyPoint food, int maxHeight, int maxWidth, Wall wall)
+        public void Move(Direction direction, MyPoint food, Size fieldSize, Wall wall)
         {
             // Начиная с конца тела
             for (int i = Body.Count - 1; i >= 0; i--)
@@ -56,7 +56,7 @@ namespace Snake
                     HandleCollisionWithWall(wall);
 
                     // Определить коллизию с границами поля (0, 20, maxWidth, maxHeight)                 
-                    HandleCollisionWithBorders(maxHeight, maxWidth);
+                    HandleCollisionWithBorders(fieldSize);
                 }
                 else
                 {
@@ -116,10 +116,10 @@ namespace Snake
             }
         }
 
-        void HandleCollisionWithBorders(int maxHeight, int maxWidth)
+        void HandleCollisionWithBorders(Size fieldSize)
         {
             if (Body[0].X < 0 || Body[0].Y < 20
-                        || Body[0].X >= maxWidth || Body[0].Y >= maxHeight)
+                        || Body[0].X >= fieldSize.Width || Body[0].Y >= fieldSize.Height)
             {
                 OnCollision();
             }
