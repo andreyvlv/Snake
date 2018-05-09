@@ -91,7 +91,10 @@ namespace Snake
 
         private static void Button_Click(object sender, EventArgs e)
         {
-            Stop();
+            // Поскольку одна и та же кнопка останавливает/запускает игру
+            StopOrPlay();
+
+            // Сохранение направления текущего движения
             currentDirection = direction;
         }
 
@@ -203,7 +206,7 @@ namespace Snake
             StartGame();
         }
 
-        static void Stop()
+        static void StopOrPlay()
         {
             if (!isPaused)
             {
@@ -213,7 +216,10 @@ namespace Snake
             }
             else
             {
+                // для восстановления направления движения, 
+                // вне зависимости от нажатых клавиш во время паузы
                 direction = currentDirection;
+
                 timer.Start();
                 isPaused = false;
                 button.Text = "⏸";
